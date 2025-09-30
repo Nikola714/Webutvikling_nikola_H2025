@@ -1,3 +1,87 @@
+:root{
+    --grey_red: #c5b2b2;
+}
+
 body{
-    background-color: aqua;
+    box-sizing: border-box;
+}
+.grid-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                            "banner"
+                            "hovedinnhold"
+                            "tilbud"
+                            "footer";
+}
+
+
+header{
+    grid-area: header;
+    background-color: var(--grey_red);
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    max-width: 100px;
+}
+.flex-meny{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+.flex-meny li{
+    align-content: center;
+
+}
+
+.flex-meny li a{
+    text-decoration: none;
+}
+
+
+.banner{
+    grid-area: banner;
+}
+main{
+    grid-area: hovedinnhold;
+}
+.mer{
+    grid-area: tilbud;
+}
+footer{
+    grid-area: footer;
+    background-color: var(--grey_red);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+footer section{
+    margin-right: 1rem;
+}
+
+footer section a{
+    display: list-item;
+    list-style: none;
+}
+
+
+
+@media only screen and (min-width: 900px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "header header header"
+        "banner banner banner"
+        "hovedinnhold hovedinnhold hovedinnhold"
+        "tilbud tilbud tilbud"
+        "footer footer footer";
+    }
+    footer{
+        justify-content: space-between;
+    }
 }
