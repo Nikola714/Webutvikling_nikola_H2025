@@ -68,39 +68,23 @@ main{
     grid-area: hovedinnhold;
 }
 
-.flex-artcile-main{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
+.flex-artcile-main {
+    display: flex;
+    gap: 1rem; 
 
-    align-items: start;
-    h3{
-
-            grid-column: 2/3;
-            grid-row: 2/3;
-    }
-    p{
-            grid-column: 2/3;
-                        grid-row: 2/3;
-
-    }
-    a{
-            grid-column: 2/3;
-                        grid-row: 2/3;
-
-    }
 }
-
 .flex-artcile-main h2{
     width: 100%;
-    grid-column: 1/4;
 }
-
-
+.flex-artcile-main h3{
+}
+.flex-artcile-main p{
+}
+.flex-artcile-main a{
+    }
 
 .skrik{
     max-width: 400px;
-    grid-column: 1/2;
 
 
 }
