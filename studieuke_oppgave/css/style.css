@@ -1,5 +1,7 @@
 :root{
     --grey_red: #c5b2b2;
+    --grey_red_sterk:#9b8686;
+    --delicate_blue: #cad5f3;
 }
 
 body{
@@ -46,10 +48,66 @@ header nav{
 
 .banner{
     grid-area: banner;
+    background-color: var(--grey_red_sterk);
+    background-image: url(../img/painting_640.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    align-content: center;
+    padding: 1rem;
+    color: #fff;
 }
+.banner a{
+    color: var(--delicate_blue);
+    text-shadow: 0 0 8px #021224;
+    
+}
+
+
 main{
     grid-area: hovedinnhold;
 }
+
+.flex-artcile-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+
+    align-items: start;
+    h3{
+
+            grid-column: 2/3;
+            grid-row: 2/3;
+    }
+    p{
+            grid-column: 2/3;
+                        grid-row: 2/3;
+
+    }
+    a{
+            grid-column: 2/3;
+                        grid-row: 2/3;
+
+    }
+}
+
+.flex-artcile-main h2{
+    width: 100%;
+    grid-column: 1/4;
+}
+
+
+
+.skrik{
+    max-width: 400px;
+    grid-column: 1/2;
+
+
+}
+.moderne_bilde{
+    max-width: 400px;
+}
+
 .mer{
     grid-area: tilbud;
 }
