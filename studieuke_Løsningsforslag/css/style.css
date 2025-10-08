@@ -14,6 +14,7 @@ a{
     display: inline-block;
     color: #000;
     text-decoration: none;
+    padding: 1rem;
 }
 
 img{
@@ -44,24 +45,61 @@ img{
     background-color: #c4c4c4;
 }
 .highlight{
-    padding: 1rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+    >*{
+        width: 50%;
+        min-width: 350px;
+        flex-grow: 1;
+    }
+
+    figure{
+        margin: 0;
+        img{
+            height: 100%;
+        }
+    }
+
     figure{
         margin: 0;
     }
+
+    section{
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        }
+}
+
+.highlight:nth-child(even){
+    flex-direction: row-reverse;
 }
 
 #serivces{
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
+    justify-content: center;
+    background-color: #c4c4c454;;
     h2{
         width: 100%;
+        text-align: center;
     }
     .service-card{
-        width: 100%;
+        width: 33%;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        min-width: 250px;
+        flex-grow: 1;
+        /* max-width: 400px; */
         i{
-            width: 50px;
-            height: 50px;
+            min-width: 50px;
+            min-height: 50px;
             padding: 0.5rem;
             border-radius: 100%;
             border: 1px solid #000;
@@ -84,6 +122,24 @@ img{
     display: none;
 }
 
+#menu{
+    list-style: none;
+    margin: 0;
+
+    li:first-child{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+#close{
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .icon-btn{
     background-color: transparent;
     border: none;
@@ -92,6 +148,19 @@ img{
         font-size: 18px;
     }
 }
+
+@media only screen and (min-width: 789px){
+    #services{
+        text-align: center;
+    }
+
+    .service-card{
+        max-width: 450px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 
 @media only screen and (max-width: 600px){
     #menu {
@@ -120,11 +189,17 @@ img{
     .hidden{
         display: inline-block;
     }
+    .btn:hover{
+        background-color: rgb(230, 157, 21);
+        color: #000;
+    }
 
     #menu{
-        ul{
-            display: flex;
-            gap: 1rem;
+        display: flex;
+        gap: 1rem;
+
+        li a:hover{
+            text-decoration: underline;
         }
     }
 
@@ -134,5 +209,13 @@ img{
 
     #close{
         display: none;
+    }
+
+    .group{
+        display: none;
+    }
+    p::selection{
+        background-color: rgb(255, 0, 217);
+        color: #fff;
     }
 }
