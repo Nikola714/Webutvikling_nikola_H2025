@@ -9,16 +9,19 @@
 /* -----------------------------------------------------
    Grunninnstillinger for HTML-elementet (kan utvides ved behov)
 ----------------------------------------------------- */
-html {
+html, body {
+   width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 /* -----------------------------------------------------
    Setter hovedfont for hele nettsiden.
    Bruker en trygg sans-serif fontstack.
 ----------------------------------------------------- */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
+/* body {
+   
+} */
 
 /* -----------------------------------------------------
    Legger til rom rundt innholdet i header-seksjonen
@@ -128,16 +131,31 @@ main section section {
 ----------------------------------------------------- */
 #tjenester {
     padding: 3rem;
-}
 
-/* -----------------------------------------------------
+    /* justify-content: flex-start; */
+   }
+
+
+   #tjenester_overskrift{
+      width: 100%;
+      margin: 2rem;
+      margin-bottom: 0rem;
+      align-items: center;
+      flex-wrap: wrap;
+      display: flex;
+      padding: 2rem;
+      padding-bottom: 0rem;
+      
+   }
+   /* -----------------------------------------------------
    Artikler i #tjenester:
    - Lys grå bakgrunn for tydelig avgrensning
    - Jevn padding for luft rundt tekst
------------------------------------------------------ */
-#tjenester article {
-    background-color: #efefef;
-    padding: 2rem;
+   ----------------------------------------------------- */
+   #tjenester article {
+      background-color: #efefef;
+      padding: 2rem;
+      margin: 1rem;
 }
 
 /* -----------------------------------------------------
@@ -257,5 +275,23 @@ h2 {
    nav ul{
       display: flex;
 
+   }
+
+   #tjenester{
+      display: flex;
+      /* justify-content: flex-start; */
+      flex-direction: row;
+      padding-top: 2rem;
+      width: 100%;
+   }
+
+   #tjenester_overskrift{
+      width: 100%;
+      margin: 4rem;
+      margin-bottom: 0rem;
+      align-items: center;
+   }
+   #tjenester article{
+      width: 100%;
    }
 }
