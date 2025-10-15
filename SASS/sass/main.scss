@@ -1,6 +1,8 @@
 @use "fonts";
 @use "colors";
 @use "layout";
+@use "components";
+
 body{
     margin: 0;
     font-family: fonts.$main-font;

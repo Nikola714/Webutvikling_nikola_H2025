@@ -1,0 +1,39 @@
+@use "colors";
+
+@mixin colorTemplate($BGcolor, $borderColor, $textColor){
+    background-color: $BGcolor;
+    border-color: $borderColor;
+    color: $textColor; 
+}
+
+
+%box-shadow{
+    box-shadow: 10px 10px 20px colors.$lightGrey;
+}
+
+
+.card{
+    border: 1px solid colors.$lightGrey;
+    padding: 1rem;
+    flex: 1 1 calc(31% - 20px);
+    min-width: 250px;
+    border-radius: 5px;
+
+    @extend %box-shadow;
+}
+
+
+.success{
+    @extend .card; //arve fra classen .card kun på classes
+    @include colorTemplate(colors.$succsessBGcolor, colors.$succsessBorderColor, colors.$succsessTextColor); //arve fra mixin 
+}
+
+.warring{
+    @extend .card;
+    @include colorTemplate(colors.$waringBGcolor, colors.$waringBorderColor, colors.$waringTextColor); //arve fra mixin 
+}
+
+.error{
+    @extend .card;
+    @include colorTemplate(colors.$errorBGcolor, colors.$errorBorderColor,colors.$errorTextColor); //arve fra mixin 
+}
