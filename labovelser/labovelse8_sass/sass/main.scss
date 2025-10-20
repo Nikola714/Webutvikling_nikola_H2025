@@ -1,0 +1,30 @@
+@use "base";
+@use "mixins";
+@use "variables";
+
+
+h1, h2, h3{
+    font-family: variables.$primær-font;
+    color: variables.$primær-farge;
+}
+ul{
+    font-family: variables.$sekundær-font;
+    color: variables.$sekundær-farge;
+    @include mixins.flexboxLayout;
+}
+
+.meny{
+    background-color: variables.$meny-bakgrunnFarge;
+    color: variables.$meny-tekstFarge;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+
+    li{
+        list-style: none;
+        justify-content: center
+    }
+    a{
+        @extend .meny;
+    }
+}

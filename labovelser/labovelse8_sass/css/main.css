@@ -1,0 +1,24 @@
+h1, h2, h3 {
+  font-family: "Outfit", sans-serif;
+  color: #000;
+}
+
+ul {
+  font-family: "Roboto", sans-serif;
+  color: #120303;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meny, .meny a {
+  background-color: #145a26;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+}
+.meny li {
+  list-style: none;
+  justify-content: center;
+}/*# sourceMappingURL=main.css.map */
