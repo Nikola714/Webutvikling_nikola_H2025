@@ -5,3 +5,7 @@
     flex-wrap: wrap;
     gap: 1rem;
 }
+
+@mixin gidLayout{
+    display: grid;
+}

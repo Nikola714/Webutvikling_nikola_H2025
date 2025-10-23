@@ -1,24 +1,96 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+.logo img {
+  border-radius: 50%;
+}
+
 h1, h2, h3 {
   font-family: "Outfit", sans-serif;
   color: #000;
 }
 
-ul {
-  font-family: "Roboto", sans-serif;
-  color: #120303;
+#welcome-banner {
+  background-image: url("https://picsum.photos/500/200");
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  min-width: 200px;
+  background-size: cover;
+  aspect-ratio: 2/1;
+  max-height: 500px;
+  margin: 0 auto;
+}
+#welcome-banner a {
+  color: #fff;
+  font-size: 20px;
 }
 
-.meny, .meny a {
+.meny {
   background-color: #145a26;
   color: #fff;
   padding: 1rem;
   position: fixed;
   bottom: 0;
+  z-index: 1;
+  border-radius: 20px;
+  min-width: 80vw;
+  margin: 1rem;
 }
-.meny li {
+.meny ul {
+  font-family: "Roboto", sans-serif;
+  color: #120303;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+  padding-inline-start: 0;
+}
+.meny ul li {
   list-style: none;
+}
+.meny ul a {
+  color: #fff;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+.scroll-container article {
+  position: relative;
+  margin: 0.5rem;
+}
+.scroll-container article a i {
+  position: absolute;
+  color: #fff;
+  opacity: 90%;
+  margin: 0.5rem;
+  font-size: 50px;
+}
+.some {
+  min-height: 180px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  padding-inline-start: 0;
+}
+.some li {
+  list-style: none;
+  margin: 1rem;
+}
+.some li i {
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 550px) {
+  .meny {
+    min-width: 90%;
+  }
 }/*# sourceMappingURL=main.css.map */

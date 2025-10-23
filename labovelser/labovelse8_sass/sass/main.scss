@@ -2,15 +2,38 @@
 @use "mixins";
 @use "variables";
 
+.logo{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+        img{
+            border-radius: 50%;
+        }
+}
+
 
 h1, h2, h3{
     font-family: variables.$primær-font;
     color: variables.$primær-farge;
 }
-ul{
-    font-family: variables.$sekundær-font;
-    color: variables.$sekundær-farge;
-    @include mixins.flexboxLayout;
+
+#welcome-banner{
+    background-image: url("https://picsum.photos/500/200");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    min-width: 200px;   
+    background-size: cover;
+    aspect-ratio: 2 / 1;
+    max-height: 500px;
+    margin: 0 auto;
+
+    a{
+        color: variables.$meny-tekstFarge;
+        font-size: 20px;
+    }
 }
 
 .meny{
@@ -19,12 +42,84 @@ ul{
     padding: 1rem;
     position: fixed;
     bottom: 0;
+    z-index: 1;
+    border-radius: 20px;
+    min-width: 80vw;
+    margin: 1rem;
+    
+    
+    ul{
+        font-family: variables.$sekundær-font;
+        color: variables.$sekundær-farge;
+        @include mixins.flexboxLayout;
+        justify-content: space-evenly;
+        padding-inline-start: 0;
+        li{
+            list-style: none;
+        }
+        a{
+            color: #fff;
+        }
+        
+        
+    }
+    
+    
+}
 
+// .grid{
+//     @include mixins.grid;
+//     grid-template-areas: ;
+// }
+
+
+.scroll-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    
+    
+    article{
+        position: relative;
+        margin: 0.5rem;
+        a{
+            i{
+                position: absolute;
+                color: #fff;
+                opacity: 90%;
+                margin: 0.5rem;
+                font-size: 50px;
+            }
+            img{
+            }
+        }
+    }
+    
+}
+
+.some{
+    min-height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-inline-start: 0;
+    
     li{
         list-style: none;
-        justify-content: center
+        margin: 1rem;
+        
+        i{
+            font-size: 30px;
+        }
     }
-    a{
-        @extend .meny;
+}
+
+
+@media only screen and (min-width: 550px){
+    .meny{
+        min-width: 90%;
+        
     }
+    
 }
