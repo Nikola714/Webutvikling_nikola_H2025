@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="nb">
 	<head>
 		<meta charset="utf-8">
 		<title>Microdata - VideoGamesSeries</title>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 		<style>
 		 #videogame{
 		    display: flex;
@@ -34,23 +33,22 @@
 		</style>
 	</head>
 	<body>
-		<main>
-			<section>
-				<h1>Assassins creed <br> valhalla</h1>
-				<p>
+		<main itemscope itemtype="https://schema.org/Game">
+			<section itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+				<h1 itemprop="name">Assassins creed <br> valhalla</h1>
+				<p itemprop="description">
 					Become Eivor, a Viking raider raised to be a fearless warrior, and lead your clan from icy desolation in Norway to a new home amid the lush farmlands of ninth-century England. Find your settlement and conquer this hostile land by any means to earn a place in Valhalla.
 				</p>
 				<figure>
-					<img src="https://it.hiof.no/~ackarlse/microdata/creed.jpg" alt="Et bilde fra Assasin Creed Valhalla">
+					<img itemprop="image" src="https://it.hiof.no/~ackarlse/microdata/creed.jpg" alt="Et bilde fra Assasin Creed Valhalla">
 					<figcaption>
 						<span>Eivor</span> som kvinnelig karakter - Assassin's Creed Valhalla. Foto fra Ubisoft 
 					</figcaption>
 				</figure>
 				<h4>Spill informasjon</h4>
-				<ul>
-					<li><span>Magnus Bruun </span> som stemmen til Eivor (M)</li>
-					<li><span>Cecilie Stenspil </span> som stemmen til Eivor (F)</li>
-					<li><span>Utvikler - Ubisoft</span></li>
+					<li><span itemprop="byArtist">Magnus Bruun </span> som stemmen til Eivor (M)</li>
+					<li><span itemprop="byArtist">Cecilie Stenspil </span> som stemmen til Eivor (F)</li>
+					<li><span itemprop="byArtist">Utvikler - Ubisoft</span></li>
 				</ul>
 			</section>
 		</main>
